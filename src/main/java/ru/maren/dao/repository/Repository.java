@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 public class Repository {
     private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
-    private final static String SCRIPT_FILE_NAME = "getProductName.sql";
+    private final static String SCRIPT_FILE_NAME = "R__get_product_name.sql";
     private final String query = read(SCRIPT_FILE_NAME);
 
     private static String read(String scriptFileName) {
@@ -37,6 +37,8 @@ public class Repository {
                 String.class);
         return productNames;
     }
+
+
 
 
 }
